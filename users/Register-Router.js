@@ -16,14 +16,18 @@ router.post("/", (req, res) => { // localhost: /api/register
    } else {
        Users.add(user)
        .then(response => {
-           res.status(200).json(response)
-       }) 
-       .catch(error => {
-           console.log(error)
-           res.status(500).json({error: "Internal Server Error (this is a backend issue)"})
-       })
-   }
+        res.status(200).json({ message: "New user created", response })
+        }) 
+        .catch(error => {
+            console.log(error)
+            res.status(500).json({error: "Internal Server Error (this is a backend issue)"})
+        }) 
+    }
 })
+
+
+    
+    
 
 module.exports = router; 
 
