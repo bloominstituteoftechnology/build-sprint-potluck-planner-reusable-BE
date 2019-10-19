@@ -9,3 +9,5 @@ const router = express.Router()
 router.post("/", (req, res) => { // localhost: /api/login 
 
 })
+
+module.exports = router; 
