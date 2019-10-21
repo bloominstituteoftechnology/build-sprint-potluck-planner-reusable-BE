@@ -7,6 +7,7 @@ const generateToken = require("../users-middleware/Token.js");
 
 const router = express.Router()
 
+// It's working 
 router.post('/register', (req, res) => { // localhost:9000/api/auth/register
   // implement registration
   const user = req.body
@@ -28,6 +29,7 @@ router.post('/register', (req, res) => { // localhost:9000/api/auth/register
   }
 });
 
+// It's working
 router.post('/login', (req, res) => { // localhost:9000/api/auth/login 
   // implement login
   const { username } = req.body

@@ -5,6 +5,7 @@ const authenticate = require("../users-middleware/authenticate.js");
 
 const router =  express.Router()
 
+// It's working
 router.get("/", authenticate, (req, res) => { // localhost:9000/api/users
     Users.find()
     .then(user => {
@@ -16,6 +17,7 @@ router.get("/", authenticate, (req, res) => { // localhost:9000/api/users
     })
 })
 
+// It's working 
 router.get("/:id", (req, res) => { // localhost:9000/api/users/:id
     const { id } =  req.params
 
@@ -55,6 +57,7 @@ router.put("/:id", (req, res) => {  // localhost:9000/api/users/:id
 })
 
 
+// It's working 
 router.delete("/:id", (req, res) => {  // localhost:9000/api/users/:id 
     const { id } = req.params
 
