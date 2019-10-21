@@ -33,5 +33,43 @@ router.get("/:id", (req, res) => { // localhost:9000/api/users/:id
     }
 }) 
 
+router.put("/:id", (req, res) => {  // localhost:9000/api/users/:id 
+    const body =  req.body
+    const { id } = req.params
+
+    Users.findById(id)
+    .then(user => {
+        if(user) {
+            Users.update(body, id)
+            .then(updateUser => {
+                res.status(200).json(updateUser)
+            })
+        } else {
+            res.status(400).json({ error: "Bad Request"})
+        }
+    })
+    .catch(error => {
+        console.log(error)
+        res.status(500).json({ error: "Internal server error" })
+    })
+})
+
+
+router.delete("/:id", (req, res) => {  // localhost:9000/api/users/:id 
+    const { id } = req.params
+
+    Users.remove(id)
+    .then(deleted => {
+        if(deleted) {
+            res.json({ message: "user deleted" })
+        } else {
+            res.status(404).json({ error: "Could not find the user within given ID"})
+        }
+    })
+    .catch(error => {
+        console.log(error)
+        res.status(500).json({ error: "Internal server error" })
+    })
+})
 
 module.exports = router; 

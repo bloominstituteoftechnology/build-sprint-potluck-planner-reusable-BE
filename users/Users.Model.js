@@ -4,7 +4,9 @@ module.exports = {
     find, 
     add, 
     addId,
-    findById
+    findById, 
+    update, 
+    remove
 }
 
 function add(user) { // register 
@@ -30,4 +32,18 @@ function find() {
 function findById(id) {
     return db("users")
     .where({ id }).first()
+}
+
+function update(id, change) {
+    return db("users")
+    .where({ id })
+    .first(change)
+
+}
+
+function remove(id) {
+    return db("users")
+    .where({ id })
+    .first()
+    .delete()
 }
