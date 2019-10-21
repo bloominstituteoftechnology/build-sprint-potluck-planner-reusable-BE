@@ -36,13 +36,13 @@ router.get("/:id", (req, res) => { // localhost:9000/api/users/:id
 }) 
 
 router.put("/:id", (req, res) => {  // localhost:9000/api/users/:id 
-    const body =  req.body
+    const body  =  req.body
     const { id } = req.params
 
     Users.findById(id)
     .then(user => {
         if(user) {
-            Users.update(body, id)
+            Users.update(id, body)
             .then(updateUser => {
                 res.status(200).json(updateUser)
             })

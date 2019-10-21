@@ -37,8 +37,8 @@ function findById(id) {
 function update(id, change) {
     return db("users")
     .where({ id })
-    .first(change)
-
+    .first()
+    .update(change)
 }
 
 function remove(id) {
