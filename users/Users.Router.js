@@ -5,7 +5,7 @@ const authenticate = require("../users-middleware/authenticate.js");
 
 const router =  express.Router()
 
-router.get("/", (req, res) => {
+router.get("/", authenticate, (req, res) => {
     Users.find()
     .then(user => {
         res.status(200).json(user)
