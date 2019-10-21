@@ -7,7 +7,7 @@ module.exports = {
     findById
 }
 
-function add(user) {
+function add(user) { // register 
     return db("users")
     .insert(user, "id")
     .then(ids => {
@@ -15,9 +15,10 @@ function add(user) {
     })
 }
 
-function addId(filter) {
+function addId(filter) { // login 
     return db("users")
-    .where(filter).first()
+    .first()
+    .where(filter)
 }
 
 function find() {
