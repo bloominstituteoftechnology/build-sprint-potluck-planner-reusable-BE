@@ -4,10 +4,12 @@ module.exports = {
     find, 
     add, 
     addId,
-    findById
+    findById, 
+    update, 
+    remove
 }
 
-function add(user) {
+function add(user) { // register 
     return db("users")
     .insert(user, "id")
     .then(ids => {
@@ -15,18 +17,33 @@ function add(user) {
     })
 }
 
-function addId(filter) {
+function addId(filter) { // login 
     return db("users")
-    .where(filter).first()
+    .first()
+    .where(filter)
 }
 
 function find() {
     return db("users")
-    .select("id", "username", "password")
+    .select("id", "username", "password", "email")
 }
 
 
 function findById(id) {
     return db("users")
     .where({ id }).first()
+}
+
+function update(id, change) {
+    return db("users")
+    .where({ id })
+    .first(change)
+
+}
+
+function remove(id) {
+    return db("users")
+    .where({ id })
+    .first()
+    .delete()
 }

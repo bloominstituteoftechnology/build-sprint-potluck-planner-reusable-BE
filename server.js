@@ -8,11 +8,14 @@ server.use(helmet())
 server.use(cors())
 server.use(express.json())
 
-const register = require("./users/Register-Router.js"); 
-const login = require("./users/Login-Router.js"); 
+const register = require("./auth/Register-Router.js"); 
+const users =  require("./users/Users.Router.js"); 
 
-server.use("/api/register", register)
-server.use("/api/login", login)
+// server.use("/api/register", register)
+// server.use("/api/login", login)
+
+server.use("/api/auth", register)
+server.use("/api/users", users)
 
 server.get("/", (req, res) => {
     res.send("Server is working!!! :)")
