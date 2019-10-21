@@ -23,7 +23,7 @@ function addId(filter) { // login
 
 function find() {
     return db("users")
-    .select("id", "username", "password")
+    .select("id", "username", "password", "email")
 }
 
 
