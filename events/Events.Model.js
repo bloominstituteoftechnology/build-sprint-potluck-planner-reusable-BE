@@ -31,7 +31,8 @@ function find() {
     "location",
     "dates",
     "food_items",
-    "guests"
+    "guests",
+    "users_id"
     )
 }
 

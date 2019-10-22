@@ -78,6 +78,4 @@ router.delete("/:id", (req, res) => { // localhost:9000/api/events/:id
 })
 
 
-
-
 module.exports = router; 
