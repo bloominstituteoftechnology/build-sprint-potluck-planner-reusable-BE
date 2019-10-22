@@ -81,7 +81,13 @@ router.delete("/:id", authenticate, (req, res) => {  // localhost:9000/api/users
 // Should be able to display user with event
 
 router.get("/:id/events", authenticate, (req, res) => {  // localhost:9000/api/users/:id/events
+    const { id } = req.params
 
+    // db("users")
+    // .where({ id })
+    // .then(user => {
+    //     res.status(200).json(user)
+    // })
 })
 
 module.exports = router; 

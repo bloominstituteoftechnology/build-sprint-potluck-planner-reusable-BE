@@ -16,6 +16,7 @@ exports.up = function(knex) {
       tbl.string("dates", 255).notNullable()
       tbl.string("food_items").notNullable() 
       tbl.string("guests", 255).notNullable()
+      tbl.integer("users_id")
     })
 };
 
