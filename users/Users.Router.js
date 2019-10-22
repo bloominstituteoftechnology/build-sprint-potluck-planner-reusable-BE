@@ -83,11 +83,8 @@ router.delete("/:id", authenticate, (req, res) => {  // localhost:9000/api/users
 router.get("/:id/events", authenticate, (req, res) => {  // localhost:9000/api/users/:id/events
     const { id } = req.params
 
-    // db("users")
-    // .where({ id })
-    // .then(user => {
-    //     res.status(200).json(user)
-    // })
+    // look at table. I think I need to bind the users table with the events table
+
 })
 
 module.exports = router; 
