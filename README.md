@@ -193,8 +193,8 @@ http method: **[GET]**
 | location   | String  | No       | Must be unique/ Must be <= 255 char  |
 | dates      | String  | No       | Must be unique/ Must be <= 255 char  |
 | food_items | String  | No       | Must be unique/ Must be <= 255 char  |
-| guests     | String  | No       | Must be unique/ Must be <= 255 char
-| users_id   | String  | NO       | Must be unique/ Must be <= 255 char
+| guests     | String  | No       | Must be unique/ Must be <= 255 char  |
+| users_id   | String  | NO       | Must be unique/ Must be <= 255 char  |
 
 
 
