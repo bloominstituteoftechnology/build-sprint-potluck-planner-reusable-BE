@@ -54,7 +54,7 @@ router.get("/:id", (req, res) => { // localhost:9000/api/events/:id
     }
 })
 
-
+// It's working 
 router.put("/:id", (req, res) => { // localhost:9000/api/events/:id
     const { id } = req.params
     const body = req.body
@@ -73,8 +73,22 @@ router.put("/:id", (req, res) => { // localhost:9000/api/events/:id
     }
 })
 
+// It's working
 router.delete("/:id", (req, res) => { // localhost:9000/api/events/:id
+    const { id } = req.params
     
+    Events.remove(id)
+    .then(deleted => {
+        if(deleted) {
+            res.status(200).json({ message: "event deleted successfully" })
+        } else {
+            res.status(404).json({ error: "Bad request" })
+        }
+    })
+    .catch(error => {
+        console.log(error)
+        res.status(500).json({ error: "Internal server error" })
+    })
 })
 
 

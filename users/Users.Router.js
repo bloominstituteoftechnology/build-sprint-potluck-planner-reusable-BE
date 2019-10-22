@@ -80,6 +80,7 @@ router.delete("/:id", authenticate, (req, res) => {  // localhost:9000/api/users
 
 // Should be able to display user with event
 
+// It's working 
 router.get("/:id/events", authenticate, (req, res) => {  // localhost:9000/api/users/:id/events
     const { id } = req.params
 

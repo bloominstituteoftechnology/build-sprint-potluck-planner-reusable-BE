@@ -45,5 +45,8 @@ function update(id, change) {
 
 function remove(id) {
     return db("events")
+    .where({ id })
+    .first()
+    .delete()
 }
 
