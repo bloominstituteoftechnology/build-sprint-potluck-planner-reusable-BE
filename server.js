@@ -10,12 +10,11 @@ server.use(express.json())
 
 const register = require("./auth/Register-Router.js"); 
 const users =  require("./users/Users.Router.js"); 
-
-// server.use("/api/register", register)
-// server.use("/api/login", login)
+const events = require("./events/Events.Router.js"); 
 
 server.use("/api/auth", register)
-server.use("/api/users", users)
+server.use("/api/users", users) 
+server.use("/api/events", events)
 
 server.get("/", (req, res) => {
     res.send("Server is working!!! :)")

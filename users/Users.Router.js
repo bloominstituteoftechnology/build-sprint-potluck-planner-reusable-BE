@@ -3,6 +3,8 @@ const express = require("express");
 const Users  =require("./Users.Model.js");
 const authenticate = require("../users-middleware/authenticate.js"); 
 
+const db = require("../data/db-Config.js"); // for /api/users/:id/events endpoint
+
 const router =  express.Router()
 
 // It's working
@@ -18,7 +20,7 @@ router.get("/", authenticate, (req, res) => { // localhost:9000/api/users
 })
 
 // It's working 
-router.get("/:id", (req, res) => { // localhost:9000/api/users/:id
+router.get("/:id", authenticate, (req, res) => { // localhost:9000/api/users/:id
     const { id } =  req.params
 
     if(!id) {
@@ -36,7 +38,7 @@ router.get("/:id", (req, res) => { // localhost:9000/api/users/:id
 }) 
 
 // It's working 
-router.put("/:id", (req, res) => {  // localhost:9000/api/users/:id 
+router.put("/:id", authenticate, (req, res) => {  // localhost:9000/api/users/:id 
     const body  =  req.body
     const { id } = req.params
 
@@ -59,7 +61,7 @@ router.put("/:id", (req, res) => {  // localhost:9000/api/users/:id
 
 
 // It's working 
-router.delete("/:id", (req, res) => {  // localhost:9000/api/users/:id 
+router.delete("/:id", authenticate, (req, res) => {  // localhost:9000/api/users/:id 
     const { id } = req.params
 
     Users.remove(id)
@@ -78,8 +80,8 @@ router.delete("/:id", (req, res) => {  // localhost:9000/api/users/:id
 
 // Should be able to display user with event
 
-router.get("/:id/events", (req, res) => {  // localhost:9000/api/users/:id/events
-    
+router.get("/:id/events", authenticate, (req, res) => {  // localhost:9000/api/users/:id/events
+
 })
 
 module.exports = router; 
