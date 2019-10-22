@@ -6,7 +6,7 @@ const authentication = require("../users-middleware/authenticate.js");
 const router = express.Router()
 
 // It's working 
-router.post("/:id", authentication, (req, res) => {  // localhost:9000/api/events/:id
+router.post("/", authentication, (req, res) => {  // localhost:9000/api/events/:id
     const body = req.body
 
     if(!body) {
