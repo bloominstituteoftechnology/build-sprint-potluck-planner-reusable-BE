@@ -10,17 +10,15 @@ http method: **[POST]**
 **Body**
 
 | name      | type   | required | description                         |  
-| --------  | ------ | ------- | ----------------------------------  |
+| --------  | ------ | ------- | ----------------------------------   |
 | username  | String | Yes      | Must be unique/ Must be <= 255 char |
 | password  | String | Yes      | Must be unique/ Must be <= 255 char |            
-| email     | String | Yes      | Must be <= 255 char                 |
 
 **Example**
 ```
 {
     username: 'Bobby',
-    password: 'password',
-    email: 'anthony@gmail.com'
+    password: 'password'
 }
 ```
 
@@ -40,14 +38,12 @@ http method: **[POST]**
 | -------- | ------ | -------- | --------------------------------- |
 | username | String | Yes      | Must be unique/ Must be >= 255 char |
 | password | String | Yes      | Must be <= 255 char                 |
-| email    | String | Yes      | Must be <= 255 char                 |
 
 **Example**
 ```
 {
     username: 'Bobby',
     password: 'password'
-    email: 'bobby@bobby'
 }
 ```
 
@@ -76,17 +72,15 @@ http method: **[GET]**
 **Body**
 
 | name      | type   | required | description                         |  
-| --------  | ------ | ------- | ----------------------------------  |
+| --------  | ------ | ------- | ----------------------------------   |
 | username  | String | Yes      | Must be unique/ Must be <= 255 char |
 | password  | String | Yes      | Must be unique/ Must be <= 255 char |            
-| email     | String | Yes      | Must be <= 255 char                 |
 
 **Example**
 ```
 {
     username: 'Abby',
-    password: 'password',
-    email: 'Abby@gmail.com'
+    password: 'password'
 }
 ```
 
@@ -102,17 +96,15 @@ http method: **[GET]**
 **Body**
 
 | name      | type   | required | description                         |  
-| --------  | ------ | ------- | ----------------------------------  |
+| --------  | ------ | ------- | ----------------------------------   |
 | username  | String | Yes      | Must be unique/ Must be <= 255 char |
 | password  | String | Yes      | Must be unique/ Must be <= 255 char |            
-| email     | String | Yes      | Must be <= 255 char                 |
 
 **Example**
 ```
 {
     username: 'Alex',
     password: 'password',
-    email: 'Alex123@gmail.com'
 }
 ```
 
@@ -128,17 +120,15 @@ http method: **[PUT]**
 **Body**
 
 | name      | type   | required | description                         |  
-| --------  | ------ | ------- | ----------------------------------  |
+| --------  | ------ | ------- | ----------------------------------   |
 | username  | String | Yes      | Must be unique/ Must be <= 255 char |
 | password  | String | Yes      | Must be unique/ Must be <= 255 char |            
-| email     | String | Yes      | Must be <= 255 char                 |
 
 **Example**
 ```
 {
     username: 'Abby',
-    password: 'password',
-    email: 'Abby@gmail.com'
+    password: 'password'
 }
 ```
 
@@ -154,17 +144,15 @@ http method: **[DELETE]**
 **Body**
 
 | name      | type   | required | description                         |  
-| --------  | ------ | ------- | ----------------------------------  |
+| --------  | ------ | ------- | ----------------------------------   |
 | username  | String | Yes      | Must be unique/ Must be <= 255 char |
 | password  | String | Yes      | Must be unique/ Must be <= 255 char |            
-| email     | String | Yes      | Must be <= 255 char                 |
 
 **Example**
 ```
 {
     username: 'Abby',
     password: 'password',
-    email: 'Abby@gmail.com'
 }
 ```
 
@@ -183,7 +171,6 @@ http method: **[GET]**
 | --------  | ------ | -------  |  ------------------------------     |
 | username  | String | Yes      | Must be unique/ Must be <= 255 char |
 | password  | String | Yes      | Must be unique/ Must be <= 255 char |            
-| email     | String | Yes      | Must be >= 255 char                 |
 
 
 | name       | type    | required | description 
@@ -203,9 +190,8 @@ http method: **[GET]**
 
 {
   "id": 1,
-  "username": Noah M,
+  "username": Noah W,
   "password": password,
-  "email": noah@gmail.com,
   "events": [
     {
       "id": 9,
