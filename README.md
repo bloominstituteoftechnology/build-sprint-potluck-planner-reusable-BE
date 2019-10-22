@@ -187,7 +187,7 @@ http method: **[GET]**
 
 
 | name       | type    | required | description 
-| ---------- | String  | -------- | ------------------------------------ |
+| ---------- | ------  | -------- | ------------------------------------ |
 | event_name | String  | No       | Must be unique/ Must be <= 255 char  |
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
 | location   | String  | No       | Must be unique/ Must be <= 255 char  |
@@ -235,7 +235,7 @@ http method: **[POST]**
 **Body**
 
 | name       | type    | required | description 
-| ---------- | String  | -------- | ------------------------------------ |
+| ---------- | ------  | -------- | ------------------------------------ |
 | event_name | String  | No       | Must be unique/ Must be <= 255 char  |
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
 | location   | String  | No       | Must be unique/ Must be <= 255 char  |
@@ -273,7 +273,7 @@ http method: **[GET]**
 **Body**
 
 | name       | type    | required | description 
-| ---------- | String  | -------- | ------------------------------------ |
+| ---------- | ------  | -------- | ------------------------------------ |
 | event_name | String  | No       | Must be unique/ Must be <= 255 char  |
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
 | location   | String  | No       | Must be unique/ Must be <= 255 char  |
@@ -311,7 +311,7 @@ http method: **[GET]**
 **Body**
 
 | name       | type    | required | description 
-| ---------- | String  | -------- | ------------------------------------ |
+| ---------- | ------  | -------- | ------------------------------------ |
 | event_name | String  | No       | Must be unique/ Must be <= 255 char  |
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
 | location   | String  | No       | Must be unique/ Must be <= 255 char  |
@@ -349,7 +349,7 @@ http method: **[PUT]**
 **Body**
 
 | name       | type    | required | description 
-| ---------- | String  | -------- | ------------------------------------ |
+| ---------- | ------  | -------- | ------------------------------------ |
 | event_name | String  | No       | Must be unique/ Must be <= 255 char  |
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
 | location   | String  | No       | Must be unique/ Must be <= 255 char  |
@@ -387,7 +387,7 @@ http method: **[DELETE]**
 **Body**
 
 | name       | type    | required | description 
-| ---------- | String  | -------- | ------------------------------------ |
+| ---------- | ------  | -------- | ------------------------------------ |
 | event_name | String  | No       | Must be unique/ Must be <= 255 char  |
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
 | location   | String  | No       | Must be unique/ Must be <= 255 char  |
