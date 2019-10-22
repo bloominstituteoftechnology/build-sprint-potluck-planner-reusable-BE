@@ -35,6 +35,7 @@ router.get("/:id", (req, res) => { // localhost:9000/api/users/:id
     }
 }) 
 
+// It's working 
 router.put("/:id", (req, res) => {  // localhost:9000/api/users/:id 
     const body  =  req.body
     const { id } = req.params
@@ -73,6 +74,12 @@ router.delete("/:id", (req, res) => {  // localhost:9000/api/users/:id
         console.log(error)
         res.status(500).json({ error: "Internal server error" })
     })
+})
+
+// Should be able to display user with event
+
+router.get("/:id/events", (req, res) => {  // localhost:9000/api/users/:id/events
+    
 })
 
 module.exports = router; 
