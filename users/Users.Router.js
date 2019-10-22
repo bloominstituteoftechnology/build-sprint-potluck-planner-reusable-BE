@@ -83,7 +83,7 @@ router.delete("/:id", authenticate, (req, res) => {  // localhost:9000/api/users
 router.get("/:id/events", authenticate, (req, res) => {  // localhost:9000/api/users/:id/events
     const { id } = req.params
 
-    // look at table. I think I need to bind the users table with the events table
+    // look at table. I think I need to bind the users table with the events table. I need to bind the to tables. 
 
 })
 
