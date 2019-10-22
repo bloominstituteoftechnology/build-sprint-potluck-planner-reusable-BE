@@ -80,11 +80,27 @@ router.delete("/:id", authenticate, (req, res) => {  // localhost:9000/api/users
 
 // Should be able to display user with event
 
+// It's working 
 router.get("/:id/events", authenticate, (req, res) => {  // localhost:9000/api/users/:id/events
     const { id } = req.params
 
-    // look at table. I think I need to bind the users table with the events table. I need to bind the to tables. 
-
+    db("users") 
+    .where({ id })
+    .then(user => {
+        db("events")
+        .where({ users_id: id })
+        .then(events => {
+            res.status(200).json({...user[0], events})
+        })
+        .catch(error => {
+            console.log(error)
+            res.status(500).json({ error: "Internal server error one" })    
+        })
+    })
+    .catch(error => {
+        console.log(error)
+        res.status(500).json({ error: "Internal server error two" })
+    })
 })
 
 module.exports = router; 

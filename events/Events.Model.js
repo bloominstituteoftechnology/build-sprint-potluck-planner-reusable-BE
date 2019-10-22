@@ -31,7 +31,8 @@ function find() {
     "location",
     "dates",
     "food_items",
-    "guests"
+    "guests",
+    "users_id"
     )
 }
 
@@ -44,5 +45,8 @@ function update(id, change) {
 
 function remove(id) {
     return db("events")
+    .where({ id })
+    .first()
+    .delete()
 }
 
