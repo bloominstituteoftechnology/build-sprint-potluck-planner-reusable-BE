@@ -6,7 +6,7 @@ const authentication = require("../users-middleware/authenticate.js");
 const router = express.Router()
 
 // It's working 
-router.post("/", authentication, (req, res) => {  // localhost:9000/api/events/:id
+router.post("/", authentication, (req, res) => {  // localhost:9000/api/events
     const body = req.body
 
     if(!body) {
@@ -24,7 +24,7 @@ router.post("/", authentication, (req, res) => {  // localhost:9000/api/events/:
 })
 
 // It's working 
-router.get("/", (req, res) => {  // localhost:9000/api/events
+router.get("/", authentication, (req, res) => {  // localhost:9000/api/events
 
     Events.find()
     .then(event => {
@@ -37,7 +37,7 @@ router.get("/", (req, res) => {  // localhost:9000/api/events
 })
 
 // It's working 
-router.get("/:id", (req, res) => { // localhost:9000/api/events/:id
+router.get("/:id", authentication, (req, res) => { // localhost:9000/api/events/:id
     const { id } = req.params
 
     if(!id) {
@@ -55,7 +55,7 @@ router.get("/:id", (req, res) => { // localhost:9000/api/events/:id
 })
 
 // It's working 
-router.put("/:id", (req, res) => { // localhost:9000/api/events/:id
+router.put("/:id", authentication, (req, res) => { // localhost:9000/api/events/:id
     const { id } = req.params
     const body = req.body
 
@@ -74,7 +74,7 @@ router.put("/:id", (req, res) => { // localhost:9000/api/events/:id
 })
 
 // It's working
-router.delete("/:id", (req, res) => { // localhost:9000/api/events/:id
+router.delete("/:id", authentication, (req, res) => { // localhost:9000/api/events/:id
     const { id } = req.params
     
     Events.remove(id)

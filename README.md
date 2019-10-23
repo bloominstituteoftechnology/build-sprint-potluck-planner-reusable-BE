@@ -12,7 +12,7 @@ http method: **[POST]**
 | name      | type   | required | description                         |  
 | --------  | ------ | ------- | ----------------------------------   |
 | username  | String | Yes      | Must be unique/ Must be <= 255 char |
-| password  | String | Yes      | Must be unique/ Must be <= 255 char |            
+| password  | String | Yes      | Must be unique/ Must be <= 255 char |         
 
 **Example**
 ```
