@@ -414,7 +414,7 @@ http method: **[POST]**
 | name       | type    | required | description 
 | ---------- | ------  | -------- | --------------------- |
 | food_item  | String  | Yes      |  Must be <= 255 char  |
-| events_id  | integer | No       |  Must be <= 255 char  |
+| events_id  | integer | Yes      |  Must be <= 255 char  |
 
 
 **Example**
@@ -440,7 +440,7 @@ http method: **[GET]**
 | name       | type    | required | description 
 | ---------- | ------  | -------- | --------------------- |
 | food_item  | String  | Yes      |  Must be <= 255 char  |
-| events_id  | integer | No       |  Must be <= 255 char  |
+| events_id  | integer | Yes      |  Must be <= 255 char  |
 
 
 **Example**
@@ -466,7 +466,7 @@ http method: **[PUT]**
 | name       | type    | required | description 
 | ---------- | ------  | -------- | --------------------- |
 | food_item  | String  | Yes      |  Must be <= 255 char  |
-| events_id  | integer | No       |  Must be <= 255 char  |
+| events_id  | integer | Yes      |  Must be <= 255 char  |
 
 
 **Example**
@@ -492,7 +492,7 @@ http method: **[DELETE]**
 | name       | type    | required | description 
 | ---------- | ------  | -------- | --------------------- |
 | food_item  | String  | Yes      |  Must be <= 255 char  |
-| events_id  | integer | No       |  Must be <= 255 char  |
+| events_id  | integer | Yes      |  Must be <= 255 char  |
 
 
 **Example**
@@ -529,7 +529,7 @@ http method: **[GET]**
 | name       | type    | required | description 
 | ---------- | ------  | -------- | --------------------- |
 | food_item  | String  | Yes      |  Must be <= 255 char  |
-| events_id  | integer | No       |  Must be <= 255 char  |
+| events_id  | integer | Yes      |  Must be <= 255 char  |
 
 **Example**
 ```

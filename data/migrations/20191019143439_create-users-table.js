@@ -21,7 +21,7 @@ exports.up = function(knex) {
       tbl.increments()
 
       tbl.string("food_item", 255).notNullable()
-      tbl.integer("events_id", 255)
+      tbl.integer("events_id", 255).notNullable()
     })
 };
 
