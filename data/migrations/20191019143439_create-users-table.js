@@ -12,7 +12,7 @@ exports.up = function(knex) {
 
       tbl.string("event_name", 255).notNullable()
       tbl.string("time", 255).notNullable()
-      tbl.string("location", 255).notNullable()
+      tbl.string("address", 255).notNullable()
       tbl.string("dates", 255).notNullable()
       tbl.string("guests", 255).notNullable()
       tbl.integer("users_id")

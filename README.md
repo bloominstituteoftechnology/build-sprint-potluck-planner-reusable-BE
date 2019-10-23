@@ -229,7 +229,7 @@ http method: **[POST]**
 | ---------- | ------  | -------- | ------------------------------------ |
 | event_name | String  | No       | Must be unique/ Must be <= 255 char  |
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
-| location   | String  | No       | Must be unique/ Must be <= 255 char  |
+| address    | String  | No       | Must be unique/ Must be <= 255 char  |
 | dates      | String  | No       | Must be unique/ Must be <= 255 char  |
 | guests     | String  | No       | Must be unique/ Must be <= 255 char  |
 | users_id   | String  | NO       | Must be unique/ Must be <= 255 char  |
@@ -242,7 +242,7 @@ http method: **[POST]**
     "id": 9,
     "event_name": "potluck at the park",
     "time": "5:00pm",
-    "location": "NYC Center Park",
+    "address": "NYC Center Park",
     "dates": "9-18-19",
     "guests": "Bob, steve, Smith, Sam",
     "users_id": 1
@@ -265,7 +265,7 @@ http method: **[GET]**
 | ---------- | ------  | -------- | ------------------------------------ |
 | event_name | String  | No       | Must be unique/ Must be <= 255 char  |
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
-| location   | String  | No       | Must be unique/ Must be <= 255 char  |
+| address    | String  | No       | Must be unique/ Must be <= 255 char  |
 | dates      | String  | No       | Must be unique/ Must be <= 255 char  |
 | guests     | String  | No       | Must be unique/ Must be <= 255 char  |
 | users_id   | String  | NO       | Must be unique/ Must be <= 255 char  |
@@ -278,7 +278,7 @@ http method: **[GET]**
     "id": 9,
     "event_name": "potluck at the park",
     "time": "5:00pm",
-    "location": "NYC Center Park",
+    "address": "NYC Center Park",
     "dates": "9-18-19",
     "guests": "Bob, steve, Smith, Sam",
     "users_id": 1
@@ -301,7 +301,7 @@ http method: **[GET]**
 | ---------- | ------  | -------- | ------------------------------------ |
 | event_name | String  | No       | Must be unique/ Must be <= 255 char  |
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
-| location   | String  | No       | Must be unique/ Must be <= 255 char  |
+| address    | String  | No       | Must be unique/ Must be <= 255 char  |
 | dates      | String  | No       | Must be unique/ Must be <= 255 char  |
 | guests     | String  | No       | Must be unique/ Must be <= 255 char  |
 | users_id   | String  | NO       | Must be unique/ Must be <= 255 char  |
@@ -314,7 +314,7 @@ http method: **[GET]**
     "id": 9,
     "event_name": "potluck at the park",
     "time": "5:00pm",
-    "location": "NYC Center Park",
+    "address": "NYC Center Park",
     "dates": "9-18-19",
     "guests": "Bob, steve, Smith, Sam",
     "users_id": 1
@@ -337,7 +337,7 @@ http method: **[PUT]**
 | ---------- | ------  | -------- | ------------------------------------ |
 | event_name | String  | No       | Must be unique/ Must be <= 255 char  |
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
-| location   | String  | No       | Must be unique/ Must be <= 255 char  |
+| address    | String  | No       | Must be unique/ Must be <= 255 char  |
 | dates      | String  | No       | Must be unique/ Must be <= 255 char  |
 | guests     | String  | No       | Must be unique/ Must be <= 255 char  |
 | users_id   | String  | NO       | Must be unique/ Must be <= 255 char  |
@@ -350,7 +350,7 @@ http method: **[PUT]**
     "id": 9,
     "event_name": "potluck at the park",
     "time": "5:00pm",
-    "location": "NYC Center Park",
+    "address": "NYC Center Park",
     "dates": "9-18-19",
     "guests": "Bob, steve, Smith, Sam",
     "users_id": 1
@@ -373,7 +373,7 @@ http method: **[DELETE]**
 | ---------- | ------  | -------- | ------------------------------------ |
 | event_name | String  | No       | Must be unique/ Must be <= 255 char  |
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
-| location   | String  | No       | Must be unique/ Must be <= 255 char  |
+| address    | String  | No       | Must be unique/ Must be <= 255 char  |
 | dates      | String  | No       | Must be unique/ Must be <= 255 char  |
 | guests     | String  | No       | Must be unique/ Must be <= 255 char  |
 | users_id   | String  | NO       | Must be unique/ Must be <= 255 char  |
@@ -386,7 +386,7 @@ http method: **[DELETE]**
     "id": 9,
     "event_name": "potluck at the park",
     "time": "5:00pm",
-    "location": "NYC Center Park",
+    "address": "NYC Center Park",
     "dates": "9-18-19",
     "guests": "Bob, steve, Smith, Sam",
     "users_id": 1
@@ -518,7 +518,7 @@ http method: **[GET]**
 | ---------- | ------  | -------- | ------------------------------------ |
 | event_name | String  | No       | Must be unique/ Must be <= 255 char  |
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
-| location   | String  | No       | Must be unique/ Must be <= 255 char  |
+| address    | String  | No       | Must be unique/ Must be <= 255 char  |
 | dates      | String  | No       | Must be unique/ Must be <= 255 char  |
 | guests     | String  | No       | Must be unique/ Must be <= 255 char  |
 | users_id   | String  | NO       | Must be unique/ Must be <= 255 char  |
@@ -537,7 +537,7 @@ http method: **[GET]**
   "id": 1,
   "event_name": "Food at NYC park",
   "time": "5:00pm",
-  "location": "NYC Center Park",
+  "address": "NYC Center Park",
   "dates": "9-18-19",
   "guests": "Bob, Steve, Smith, Sam",
   "users_id": 1,
