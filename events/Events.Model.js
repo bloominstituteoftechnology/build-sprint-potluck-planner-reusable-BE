@@ -28,7 +28,7 @@ function find() {
     "id", 
     "event_name", 
     "time",
-    "location",
+    "address",
     "dates",
     "guests",
     "users_id"
