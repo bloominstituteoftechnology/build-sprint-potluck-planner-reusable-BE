@@ -400,3 +400,158 @@ http method: **[DELETE]**
 ```
 
 **Response** 200 (event deleted successfully)
+
+
+========================== FOODS START HERE =============================
+
+**POST foods** 
+method url: **/api/foods**
+
+http method: **[POST]**
+
+**Body**
+
+| name       | type    | required | description 
+| ---------- | ------  | -------- | --------------------- |
+| food_item  | String  | Yes      |  Must be <= 255 char  |
+| events_id  | integer | No       |  Must be <= 255 char  |
+
+
+**Example**
+```
+{
+	"food_item": "pizza3",
+	"events_id": 1
+}
+
+```
+
+**Response** 200 (events was created successfully)
+
+=======================================================
+
+**GET foods** 
+method url: **/api/foods**
+
+http method: **[GET]**
+
+**Body**
+
+| name       | type    | required | description 
+| ---------- | ------  | -------- | --------------------- |
+| food_item  | String  | Yes      |  Must be <= 255 char  |
+| events_id  | integer | No       |  Must be <= 255 char  |
+
+
+**Example**
+```
+{
+	"food_item": "pizza3",
+	"events_id": 1
+}
+
+```
+
+**Response** 200 
+
+=======================================================
+
+**PUT foods** 
+method url: **/api/foods/:id**
+
+http method: **[PUT]**
+
+**Body**
+
+| name       | type    | required | description 
+| ---------- | ------  | -------- | --------------------- |
+| food_item  | String  | Yes      |  Must be <= 255 char  |
+| events_id  | integer | No       |  Must be <= 255 char  |
+
+
+**Example**
+```
+{
+	"food_item": "pizza3",
+	"events_id": 1
+}
+
+```
+
+**Response** 200 
+
+=======================================================
+
+**DELETE foods** 
+method url: **/api/foods/:id**
+
+http method: **[DELETE]**
+
+**Body**
+
+| name       | type    | required | description 
+| ---------- | ------  | -------- | --------------------- |
+| food_item  | String  | Yes      |  Must be <= 255 char  |
+| events_id  | integer | No       |  Must be <= 255 char  |
+
+
+**Example**
+```
+{
+	"food_item": "pizza3",
+	"events_id": 1
+}
+
+```
+
+**Response** 200 (event deleted successfully )
+
+===============================================
+
+**GET a type of food with events!!** 
+method url: **/api/foods/:id/events**
+
+http method: **[GET]**
+
+**Body**         
+
+| name       | type    | required | description 
+| ---------- | ------  | -------- | ------------------------------------ |
+| event_name | String  | No       | Must be unique/ Must be <= 255 char  |
+| time       | String  | No       | Must be unique/ Must be <= 255 char  |
+| location   | String  | No       | Must be unique/ Must be <= 255 char  |
+| dates      | String  | No       | Must be unique/ Must be <= 255 char  |
+| food_items | String  | No       | Must be unique/ Must be <= 255 char  |
+| guests     | String  | No       | Must be unique/ Must be <= 255 char  |
+| users_id   | String  | NO       | Must be unique/ Must be <= 255 char  |
+
+
+| name       | type    | required | description 
+| ---------- | ------  | -------- | --------------------- |
+| food_item  | String  | Yes      |  Must be <= 255 char  |
+| events_id  | integer | No       |  Must be <= 255 char  |
+
+**Example**
+```
+
+{
+  "id": 1,
+  "event_name": "Food at NYC park",
+  "time": "5:00pm",
+  "location": "NYC Center Park",
+  "dates": "9-18-19",
+  "guests": "Bob, Steve, Smith, Sam",
+  "users_id": 1,
+  "food": [
+    {
+      "id": 1,
+      "food_item": "pizza",
+      "events_id": 1
+    }
+  ]
+}
+
+
+```
+
+**Response** 200 

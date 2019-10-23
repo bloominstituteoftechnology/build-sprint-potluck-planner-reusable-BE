@@ -9,7 +9,7 @@ const db = require("../data/db-Config.js"); // for /api/users/:id/events endpoin
 const router = express.Router()
 
 // It's working 
-router.post("/", authentication, (req, res) => {  // localhost:9000/api/foods/:id
+router.post("/", authentication, (req, res) => {  // localhost:9000/api/foods
     const body = req.body
 
     if(!body) {
@@ -38,24 +38,6 @@ router.get("/", authentication, (req, res) => {  // localhost:9000/api/foods
         res.status(500).json({ error: "Internal server error" })
     })
 })
-
-// // It's working 
-// router.get("/:id", authentication, (req, res) => { // localhost:9000/api/events/:id
-//     const { id } = req.params
-
-//     if(!id) {
-//         res.status(404).json({ error: "Bad Request" })
-//     } else {
-//         Events.findById(id)
-//         .then(event => {
-//             res.status(200).json(event)
-//         })
-//         .catch(error => {
-//             console.log(error)
-//             res.status(500).json({ error: "Internal server error" })
-//         })
-//     }
-// })
 
 // It's working 
 router.put("/:id", authentication, (req, res) => { // localhost:9000/api/foods/:id
