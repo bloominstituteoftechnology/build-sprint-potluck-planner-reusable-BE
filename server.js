@@ -12,10 +12,12 @@ server.use(express.json())
 const register = require("./auth/Register-Router.js"); 
 const users =  require("./users/Users.Router.js"); 
 const events = require("./events/Events.Router.js"); 
+const foods = require("./foods/Foods.Router.js"); 
 
 server.use("/api/auth", register)
 server.use("/api/users", users) 
 server.use("/api/events", events)
+server.use("/api/foods", foods)
 
 server.get("/", (req, res) => {
     res.send("Server is working!!! :)")

@@ -1,18 +1,21 @@
 const express = require("express"); 
 
-const Events = require("./Events.Model.js")
+const Foods = require("./Foods.model.js");
 const authentication = require("../users-middleware/authenticate.js"); 
+
+const db = require("../data/db-Config.js"); // for /api/users/:id/events endpoint
+
 
 const router = express.Router()
 
 // It's working 
-router.post("/", authentication, (req, res) => {  // localhost:9000/api/events
+router.post("/", authentication, (req, res) => {  // localhost:9000/api/foods
     const body = req.body
 
     if(!body) {
         res.status(404).json({ error: "Bad Request" })
     } else {
-        Events.add(body)
+        Foods.add(body)
         .then(event => {
             res.status(200).json({ message: "event was created successfully", event })
         })
@@ -24,9 +27,9 @@ router.post("/", authentication, (req, res) => {  // localhost:9000/api/events
 })
 
 // It's working 
-router.get("/", authentication, (req, res) => {  // localhost:9000/api/events
+router.get("/", authentication, (req, res) => {  // localhost:9000/api/foods
 
-    Events.find()
+    Foods.find()
     .then(event => {
      res.status(200).json(event)   
     })
@@ -37,32 +40,14 @@ router.get("/", authentication, (req, res) => {  // localhost:9000/api/events
 })
 
 // It's working 
-router.get("/:id", authentication, (req, res) => { // localhost:9000/api/events/:id
-    const { id } = req.params
-
-    if(!id) {
-        res.status(404).json({ error: "Bad Request" })
-    } else {
-        Events.findById(id)
-        .then(event => {
-            res.status(200).json(event)
-        })
-        .catch(error => {
-            console.log(error)
-            res.status(500).json({ error: "Internal server error" })
-        })
-    }
-})
-
-// It's working 
-router.put("/:id", authentication, (req, res) => { // localhost:9000/api/events/:id
+router.put("/:id", authentication, (req, res) => { // localhost:9000/api/foods/:id
     const { id } = req.params
     const body = req.body
 
     if(!id && !body) {
         res.status(404).json({ error: "Bad Request" })
     } else {
-        Events.update(id, body)
+        Foods.update(id, body)
         .then(event => {
             res.status(200).json(event)
         })
@@ -74,10 +59,10 @@ router.put("/:id", authentication, (req, res) => { // localhost:9000/api/events/
 })
 
 // It's working
-router.delete("/:id", authentication, (req, res) => { // localhost:9000/api/events/:id
+router.delete("/:id", authentication, (req, res) => { // localhost:9000/api/foods/:id
     const { id } = req.params
     
-    Events.remove(id)
+    Foods.remove(id)
     .then(deleted => {
         if(deleted) {
             res.status(200).json({ message: "event deleted successfully" })
@@ -91,5 +76,26 @@ router.delete("/:id", authentication, (req, res) => { // localhost:9000/api/even
     })
 })
 
+router.get("/:id/events", authentication, (req, res) => {  // localhost:9000/api/foods/:id/events
+    const { id } = req.params
+
+    db("events") 
+    .where({ id })
+    .then(user => {
+        db("foods")
+        .where({ events_id: id })
+        .then(food => {
+            res.status(200).json({...user[0], food})
+        })
+        .catch(error => {
+            console.log(error)
+            res.status(500).json({ error: "Internal server error one" })    
+        })
+    })
+    .catch(error => {
+        console.log(error)
+        res.status(500).json({ error: "Internal server error two" })
+    })
+})
 
 module.exports = router; 

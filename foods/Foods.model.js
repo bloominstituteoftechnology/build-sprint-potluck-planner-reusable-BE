@@ -9,7 +9,7 @@ module.exports = {
 }
  
 function add(event) { // register 
-    return db("events")
+    return db("foods")
     .insert(event, "id")
     .then(ids => {
         return findById([ids]) 
@@ -17,36 +17,26 @@ function add(event) { // register
 }
 
 function findById(id) {
-    return db("events")
+    return db("foods")
     .where({ id })
     .first()
 }
 
 function find() {
-    return db("events")
-    .select(
-    "id", 
-    "event_name", 
-    "time",
-    "location",
-    "dates",
-    // "food_items",
-    "guests",
-    "users_id"
-    )
+    return db("foods")
+    .select("id", "food_item")
 }
 
 function update(id, change) {
-    return db("events")
+    return db("foods")
     .where({ id })
     .first()
     .update(change)
 }
 
 function remove(id) {
-    return db("events")
+    return db("foods")
     .where({ id })
     .first()
     .delete()
 }
-
