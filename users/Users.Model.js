@@ -11,13 +11,13 @@ module.exports = {
 
 function add(user) { // register 
     return db("users")
-    .insert(user, "id", "email") // aded email so when registering new user most input email 
+    .insert(user, "id", "email") // added email so when registering new user most input email 
     .then(ids => {
         return findById([ids]) 
     })
 }
 
-function addId(filter) { // login / users does not need to into email when login in 
+function addId(filter) { // login / users do not need to input email when logging in
     return db("users")
     .first()
     .where(filter)
