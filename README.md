@@ -12,13 +12,15 @@ http method: **[POST]**
 | name      | type   | required | description                         |  
 | --------  | ------ | ------- | ----------------------------------   |
 | username  | String | Yes      | Must be unique/ Must be <= 255 char |
-| password  | String | Yes      | Must be unique/ Must be <= 255 char |         
+| password  | String | Yes      |  Must be <= 255 char                |    
+| email     | String | No       | Must be unique/ Must be <= 255 char |    
 
 **Example**
 ```
 {
     username: 'Bobby',
-    password: 'password'
+    password: 'password',
+    email: 'b@b'
 }
 ```
 
@@ -74,13 +76,14 @@ http method: **[GET]**
 | name      | type   | required | description                         |  
 | --------  | ------ | ------- | ----------------------------------   |
 | username  | String | Yes      | Must be unique/ Must be <= 255 char |
-| password  | String | Yes      | Must be unique/ Must be <= 255 char |            
+| password  | String | Yes      | Must be unique/ Must be <= 255 char |    | email     | String | No       | Must be unique/ Must be <= 255 char |        
 
 **Example**
 ```
 {
     username: 'Abby',
-    password: 'password'
+    password: 'password',
+    email: 'a@a'
 }
 ```
 
@@ -98,13 +101,14 @@ http method: **[GET]**
 | name      | type   | required | description                         |  
 | --------  | ------ | ------- | ----------------------------------   |
 | username  | String | Yes      | Must be unique/ Must be <= 255 char |
-| password  | String | Yes      | Must be unique/ Must be <= 255 char |            
+| password  | String | Yes      | Must be unique/ Must be <= 255 char |    | email     | String | No       | Must be unique/ Must be <= 255 char |        
 
 **Example**
 ```
 {
     username: 'Alex',
     password: 'password',
+    email: 'a@a'
 }
 ```
 
@@ -122,13 +126,14 @@ http method: **[PUT]**
 | name      | type   | required | description                         |  
 | --------  | ------ | ------- | ----------------------------------   |
 | username  | String | Yes      | Must be unique/ Must be <= 255 char |
-| password  | String | Yes      | Must be unique/ Must be <= 255 char |            
+| password  | String | Yes      | Must be unique/ Must be <= 255 char |    | email     | String | No       | Must be unique/ Must be <= 255 char |        
 
 **Example**
 ```
 {
     username: 'Abby',
-    password: 'password'
+    password: 'password',
+    email: 'a@a'
 }
 ```
 
@@ -146,13 +151,14 @@ http method: **[DELETE]**
 | name      | type   | required | description                         |  
 | --------  | ------ | ------- | ----------------------------------   |
 | username  | String | Yes      | Must be unique/ Must be <= 255 char |
-| password  | String | Yes      | Must be unique/ Must be <= 255 char |            
+| password  | String | Yes      | Must be unique/ Must be <= 255 char |    | email     | String | No       | Must be unique/ Must be <= 255 char |         
 
 **Example**
 ```
 {
     username: 'Abby',
     password: 'password',
+    email: 'a@a'
 }
 ```
 
@@ -170,7 +176,7 @@ http method: **[GET]**
 | name      | type   | required | description                         |  
 | --------  | ------ | -------  |  ------------------------------     |
 | username  | String | Yes      | Must be unique/ Must be <= 255 char |
-| password  | String | Yes      | Must be unique/ Must be <= 255 char |            
+| password  | String | Yes      | Must be unique/ Must be <= 255 char |    | email     | String | No       | Must be unique/ Must be <= 255 char |         
 
 
 | name       | type    | required | description 
@@ -191,6 +197,7 @@ http method: **[GET]**
   "id": 1,
   "username": Noah W,
   "password": password,
+   "email": 'a@a'
   "events": [
     {
       "id": 9,
@@ -400,10 +407,10 @@ http method: **[POST]**
 **Body**
 
 | name       | type    | required | description 
-| ---------- | ------  | -------- | --------------------- |
-| food_item  | String  | Yes      |  Must be <= 255 char  |
-| events_id  | integer | Yes      |  Must be <= 255 char  |
-
+| ---------- | ------  | -------- | ---------------------         |
+| food_item  | String  | Yes      |  Must be <= 255 char          |
+| events_id  | integer | Yes      |  Must be <= 255 char          |
+| completed  | boolean | Yes      |  No requirement in this felid | 
 
 **Example**
 ```
@@ -427,10 +434,10 @@ http method: **[GET]**
 **Body**
 
 | name       | type    | required | description 
-| ---------- | ------  | -------- | --------------------- |
-| food_item  | String  | Yes      |  Must be <= 255 char  |
-| events_id  | integer | Yes      |  Must be <= 255 char  |
-
+| ---------- | ------  | -------- | ---------------------------   |
+| food_item  | String  | Yes      |  Must be <= 255 char          |
+| events_id  | integer | Yes      |  Must be <= 255 char          |
+| completed  | boolean | Yes      |  No requirement in this felid | 
 
 **Example**
 ```
@@ -454,10 +461,10 @@ http method: **[PUT]**
 **Body**
 
 | name       | type    | required | description 
-| ---------- | ------  | -------- | --------------------- |
-| food_item  | String  | Yes      |  Must be <= 255 char  |
-| events_id  | integer | Yes      |  Must be <= 255 char  |
-
+| ---------- | ------  | -------- | --------------------------    |
+| food_item  | String  | Yes      |  Must be <= 255 char          |
+| events_id  | integer | Yes      |  Must be <= 255 char          |
+| completed  | boolean | Yes      |  No requirement in this felid | 
 
 **Example**
 ```
@@ -481,10 +488,10 @@ http method: **[DELETE]**
 **Body**
 
 | name       | type    | required | description 
-| ---------- | ------  | -------- | --------------------- |
-| food_item  | String  | Yes      |  Must be <= 255 char  |
-| events_id  | integer | Yes      |  Must be <= 255 char  |
-
+| ---------- | ------  | -------- | ---------------------------   |
+| food_item  | String  | Yes      |  Must be <= 255 char          |
+| events_id  | integer | Yes      |  Must be <= 255 char          |
+| completed  | boolean | Yes      |  No requirement in this felid | 
 
 **Example**
 ```
