@@ -13,7 +13,6 @@ exports.up = function(knex) {
       tbl.string("time", 255).notNullable()
       tbl.string("location", 255).notNullable()
       tbl.string("dates", 255).notNullable()
-      // tbl.string("food_items").notNullable() 
       tbl.string("guests", 255).notNullable()
       tbl.integer("users_id")
     })
@@ -22,6 +21,7 @@ exports.up = function(knex) {
 
       tbl.string("food_item", 255).notNullable()
       tbl.integer("events_id", 255).notNullable()
+      tbl.boolean("completed").notNullable()
     })
 };
 

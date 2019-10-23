@@ -24,7 +24,7 @@ function findById(id) {
 
 function find() {
     return db("foods")
-    .select("id", "food_item")
+    .select("id", "food_item", "completed")
 }
 
 function update(id, change) {

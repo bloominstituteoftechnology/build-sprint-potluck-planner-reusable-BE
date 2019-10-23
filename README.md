@@ -179,7 +179,6 @@ http method: **[GET]**
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
 | location   | String  | No       | Must be unique/ Must be <= 255 char  |
 | dates      | String  | No       | Must be unique/ Must be <= 255 char  |
-| food_items | String  | No       | Must be unique/ Must be <= 255 char  |
 | guests     | String  | No       | Must be unique/ Must be <= 255 char  |
 | users_id   | String  | NO       | Must be unique/ Must be <= 255 char  |
 
@@ -199,7 +198,6 @@ http method: **[GET]**
       "time": "5:00pm",
       "location": "NYC Center Park",
       "dates": "9-18-19",
-      "food_items": "buggers, pasta, pizza",
       "guests": "Bob, steve, Smith, Sam",
       "users_id": 1
     }
@@ -226,9 +224,8 @@ http method: **[POST]**
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
 | location   | String  | No       | Must be unique/ Must be <= 255 char  |
 | dates      | String  | No       | Must be unique/ Must be <= 255 char  |
-| food_items | String  | No       | Must be unique/ Must be <= 255 char  |
-| guests     | String  | No       | Must be unique/ Must be <= 255 char
-| users_id   | String  | NO       | Must be unique/ Must be <= 255 char
+| guests     | String  | No       | Must be unique/ Must be <= 255 char  |
+| users_id   | String  | NO       | Must be unique/ Must be <= 255 char  |
 
 
 
@@ -240,7 +237,6 @@ http method: **[POST]**
     "time": "5:00pm",
     "location": "NYC Center Park",
     "dates": "9-18-19",
-    "food_items": "buggers, pasta, pizza",
     "guests": "Bob, steve, Smith, Sam",
     "users_id": 1
 }
@@ -264,9 +260,8 @@ http method: **[GET]**
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
 | location   | String  | No       | Must be unique/ Must be <= 255 char  |
 | dates      | String  | No       | Must be unique/ Must be <= 255 char  |
-| food_items | String  | No       | Must be unique/ Must be <= 255 char  |
-| guests     | String  | No       | Must be unique/ Must be <= 255 char
-| users_id   | String  | NO       | Must be unique/ Must be <= 255 char
+| guests     | String  | No       | Must be unique/ Must be <= 255 char  |
+| users_id   | String  | NO       | Must be unique/ Must be <= 255 char  |
 
 
 
@@ -278,7 +273,6 @@ http method: **[GET]**
     "time": "5:00pm",
     "location": "NYC Center Park",
     "dates": "9-18-19",
-    "food_items": "buggers, pasta, pizza",
     "guests": "Bob, steve, Smith, Sam",
     "users_id": 1
 }
@@ -302,9 +296,8 @@ http method: **[GET]**
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
 | location   | String  | No       | Must be unique/ Must be <= 255 char  |
 | dates      | String  | No       | Must be unique/ Must be <= 255 char  |
-| food_items | String  | No       | Must be unique/ Must be <= 255 char  |
-| guests     | String  | No       | Must be unique/ Must be <= 255 char
-| users_id   | String  | NO       | Must be unique/ Must be <= 255 char
+| guests     | String  | No       | Must be unique/ Must be <= 255 char  |
+| users_id   | String  | NO       | Must be unique/ Must be <= 255 char  |
 
 
 
@@ -316,7 +309,6 @@ http method: **[GET]**
     "time": "5:00pm",
     "location": "NYC Center Park",
     "dates": "9-18-19",
-    "food_items": "buggers, pasta, pizza",
     "guests": "Bob, steve, Smith, Sam",
     "users_id": 1
 }
@@ -340,9 +332,8 @@ http method: **[PUT]**
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
 | location   | String  | No       | Must be unique/ Must be <= 255 char  |
 | dates      | String  | No       | Must be unique/ Must be <= 255 char  |
-| food_items | String  | No       | Must be unique/ Must be <= 255 char  |
-| guests     | String  | No       | Must be unique/ Must be <= 255 char
-| users_id   | String  | NO       | Must be unique/ Must be <= 255 char
+| guests     | String  | No       | Must be unique/ Must be <= 255 char  |
+| users_id   | String  | NO       | Must be unique/ Must be <= 255 char  |
 
 
 
@@ -354,7 +345,6 @@ http method: **[PUT]**
     "time": "5:00pm",
     "location": "NYC Center Park",
     "dates": "9-18-19",
-    "food_items": "buggers, pasta, pizza",
     "guests": "Bob, steve, Smith, Sam",
     "users_id": 1
 }
@@ -378,9 +368,8 @@ http method: **[DELETE]**
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
 | location   | String  | No       | Must be unique/ Must be <= 255 char  |
 | dates      | String  | No       | Must be unique/ Must be <= 255 char  |
-| food_items | String  | No       | Must be unique/ Must be <= 255 char  |
-| guests     | String  | No       | Must be unique/ Must be <= 255 char
-| users_id   | String  | NO       | Must be unique/ Must be <= 255 char
+| guests     | String  | No       | Must be unique/ Must be <= 255 char  |
+| users_id   | String  | NO       | Must be unique/ Must be <= 255 char  |
 
 
 
@@ -392,7 +381,6 @@ http method: **[DELETE]**
     "time": "5:00pm",
     "location": "NYC Center Park",
     "dates": "9-18-19",
-    "food_items": "buggers, pasta, pizza",
     "guests": "Bob, steve, Smith, Sam",
     "users_id": 1
 }
@@ -421,7 +409,8 @@ http method: **[POST]**
 ```
 {
 	"food_item": "pizza3",
-	"events_id": 1
+	"events_id": 1,
+  "completed": true 
 }
 
 ```
@@ -447,7 +436,8 @@ http method: **[GET]**
 ```
 {
 	"food_item": "pizza3",
-	"events_id": 1
+	"events_id": 1, 
+  "completed": true 
 }
 
 ```
@@ -474,6 +464,7 @@ http method: **[PUT]**
 {
 	"food_item": "pizza3",
 	"events_id": 1
+  "completed": false 
 }
 
 ```
@@ -500,6 +491,7 @@ http method: **[DELETE]**
 {
 	"food_item": "pizza3",
 	"events_id": 1
+  "completed": true 
 }
 
 ```
@@ -521,15 +513,15 @@ http method: **[GET]**
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
 | location   | String  | No       | Must be unique/ Must be <= 255 char  |
 | dates      | String  | No       | Must be unique/ Must be <= 255 char  |
-| food_items | String  | No       | Must be unique/ Must be <= 255 char  |
 | guests     | String  | No       | Must be unique/ Must be <= 255 char  |
 | users_id   | String  | NO       | Must be unique/ Must be <= 255 char  |
 
 
 | name       | type    | required | description 
-| ---------- | ------  | -------- | --------------------- |
-| food_item  | String  | Yes      |  Must be <= 255 char  |
-| events_id  | integer | Yes      |  Must be <= 255 char  |
+| ---------- | ------  | -------- | ---------------------------   |
+| food_item  | String  | Yes      |  Must be <= 255 char          |
+| events_id  | integer | Yes      |  Must be <= 255 char          |
+| completed  | boolean | Yes      |  No requirement in this felid |              
 
 **Example**
 ```
@@ -546,7 +538,8 @@ http method: **[GET]**
     {
       "id": 1,
       "food_item": "pizza",
-      "events_id": 1
+      "events_id": 1, 
+      "completed": false
     }
   ]
 }
