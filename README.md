@@ -7,6 +7,7 @@ method url: **/api/auth/register**
 
 http method: **[POST]**
 
+
 **Body**
 
 | name      | type   | required | description                         |  
@@ -45,7 +46,8 @@ http method: **[POST]**
 ```
 {
     username: 'Bobby',
-    password: 'password'
+    password: 'password',
+    id: '1'
 }
 ```
 
