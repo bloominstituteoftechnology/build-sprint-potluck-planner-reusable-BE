@@ -40,11 +40,12 @@ router.post('/login', (req, res) => { // localhost:9000/api/auth/login
   } else {
       Users.addId({ username })
       .first()
-      .then(user => {
+      .then(user => { 
+        // console.log(user)
           if(user && bcrypt.compareSync(password, user.password)) {
               const token = generateToken(user)
               
-              res.status(200).json({ message: `Welcome ${user.username}!!`, token })  
+              res.status(200).json({ message: `Welcome ${user.username}!!`, token, id: user.id })  
           } else {
               res.status(400).json({ error: "please provide credentials"})
           }

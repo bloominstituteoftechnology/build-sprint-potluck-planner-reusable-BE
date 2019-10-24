@@ -7,6 +7,7 @@ method url: **/api/auth/register**
 
 http method: **[POST]**
 
+
 **Body**
 
 | name      | type   | required | description                         |  
@@ -45,7 +46,8 @@ http method: **[POST]**
 ```
 {
     username: 'Bobby',
-    password: 'password'
+    password: 'password',
+    id: '1'
 }
 ```
 
@@ -183,7 +185,7 @@ http method: **[GET]**
 | ---------- | ------  | -------- | ------------------------------------ |
 | event_name | String  | No       | Must be unique/ Must be <= 255 char  |
 | time       | String  | No       | Must be unique/ Must be <= 255 char  |
-| location   | String  | No       | Must be unique/ Must be <= 255 char  |
+| address    | String  | No       | Must be unique/ Must be <= 255 char  |
 | dates      | String  | No       | Must be unique/ Must be <= 255 char  |
 | guests     | String  | No       | Must be unique/ Must be <= 255 char  |
 | users_id   | String  | NO       | Must be unique/ Must be <= 255 char  |
