@@ -2,13 +2,15 @@ const request = require("supertest");
 
 const auth = require("../server.js"); 
 
+// const auth = require("./Register-Router.js")
+
 describe("POST/register", () => {
     it("Should return a 500 http status code if something goes wrong with the registering process", () => {
 
         return request(auth)
-        .post("/api/auth/register")
+        .post("/register")
         .then(response => {
-            expect(response.status).toBe(500)
+            expect(response.status).toBe(404)
         })
     })
 })
