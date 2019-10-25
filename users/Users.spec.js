@@ -3,12 +3,12 @@ const request = require("supertest");
 const auth = require("../server.js"); 
 
 describe("GET/users", () => {
-    it("Should return a 500 http status code if something goes wrong with .get() the users", () => {
+    it("Should return a 200 http status code if users is fetched correctly", () => {
 
         return request(auth)
-        .post("/api/users")
+        .get("/")
         .then(response => {
-            expect(response.status).toBe(404)
+            expect(response.status).toBe(200)
         })
     })
 })
@@ -17,7 +17,7 @@ describe("GET/users", () => {
     it("Should return a 404 http status code if user makes a bad request ", () => {
         
         return request(auth) 
-        .post("/api/users/:id")
+        .get("/:id")
         .then(response => {
             expect(response.status).toBe(404)
         })
@@ -28,7 +28,7 @@ describe("PUT/users", () => {
     it("Should return a 404 http status code if user makes a bad request ", () => {
         
         return request(auth) 
-        .post("/api/users/:id")
+        .put("/:id")
         .then(response => {
             expect(response.status).toBe(404)
         })
@@ -39,7 +39,7 @@ describe("DELETE/users", () => {
     it("Should return a 404 http status code if user makes a bad request ", () => {
         
         return request(auth) 
-        .post("/api/users/:id")
+        .delete("/:id")
         .then(response => {
             expect(response.status).toBe(404)
         })
